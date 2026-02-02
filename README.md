@@ -1,93 +1,25 @@
-# 興農生物工廠
+# 智慧廠房戰情室 (Smart Factory War Room)
 
+## 📌 專案簡介
+本專案是為智慧工廠開發的即時監控與數據分析平台。系統整合了物聯網感測數據與影像監控，旨在提供管理者一個直觀的「戰情中心」，用於追蹤廠區安全、異常行為以及生產趨勢。
 
+## 🚀 核心功能
+* **即時錄影監控牆**：支持多達 17 組監視器畫面整合，並具備區域篩選（如 1F、B1）與 AI 異常偵測標籤（如：PPE 佩戴檢查、電子圍籬 e-fence 觸發）。
+* **數據分析可視化**：將感測器數據轉化為趨勢圖表，統計各區域異常發生頻率（如：火警、煙霧、非法入侵），協助進行 SPC（統計製程管制）分析。
+* **異常結案管理系統**：提供完整的後台清單，追蹤每一筆異常事件的處理進度（未處理、處理中、已結案），確保廠區安全無死角。
 
-## Getting started
+## 🛠 技術棧 (Tech Stack)
+* **前端 (Frontend)**：Vue.js / React (Hooks)
+* **後端 (Backend)**：ASP.NET Core (.NET 8+)
+* **資料庫 (Database)**：Microsoft SQL Server (SSMS)
+* **開發工具**：Visual Studio / VS Code, Git
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## 📂 專案架構說明
+- `biofactory-front/`：負責戰情室儀表板與數據圖表的 UI 渲染。
+- `biofactory-back/`：處理感測數據聚合邏輯、API 授權與監控路徑分發。
+- `docs/`：包含系統架構圖與功能規格說明書。
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.ksi.com.tw/ksi-v7/yumei/biofactory.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.ksi.com.tw/ksi-v7/yumei/biofactory/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## 👨‍💻 維護筆記 (Maintainer Notes)
+1. **數據連動**：感測資料 SPC 戰情室子節點已掛載於農場/廠房基本資料維護模組，修改資料庫關聯時需注意 `sys_id` 與資料夾路徑之對應。
+2. **API 規範**：後端採用 RESTful API 規範，前端透過 Axios 進行資料擷取。
+3. **擴充性**：系統設計已考量未來對接「農產品碳足跡雲端平台」之計算邏輯。
