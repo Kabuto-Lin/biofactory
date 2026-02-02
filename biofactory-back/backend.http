@@ -1,0 +1,6 @@
+@Sinon_Factory_HostAddress = http://localhost:5175
+
+GET {{Sinon_Factory_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

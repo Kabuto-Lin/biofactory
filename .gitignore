@@ -1,0 +1,23 @@
+# === Visual Studio / .NET ===
+.vs/
+**/.vs/
+bin/
+obj/
+**/bin/
+**/obj/
+*.dll
+*.pdb
+
+# === Debug / Build ===
+Debug/
+Release/
+**/Debug/
+**/Release/
+
+# === Cache ===
+*.cache
+*.json.cache
+
+# === Node / Frontend ===
+node_modules/
+dist/

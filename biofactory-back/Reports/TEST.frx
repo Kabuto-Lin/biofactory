@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="11/01/2021 15:50:52" ReportInfo.Modified="09/24/2024 16:10:48" ReportInfo.CreatorVersion="2021.4.9.0">
+  <ScriptText>
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <MsSqlDataConnection Name="Connection" ConnectionString="rijcmlqILXjBMxlFgK6wm0VWYVRX08i+MN4foPCgUk0H/sngbw2JUpvhSAXJBp7gIYoLg8oLOyDdmGRlfT3gbU69oR0IbifYE4qJe1+XNfwFRJdvTqaKY+H6i0TeG6JEbwGECjGcb4P6DgFz1mesR0pi5irlOkTUNp52Bdxp76Tb7mpGV0leWzoHAd/vuLYm0H+yo7X4dtKjmEPSAXEo4oL9gvEgQ==">
+      <TableDataSource Name="Table2" Alias="Table" DataType="System.Int32" Enabled="true" SelectCommand="SELECT * FROM SYSPASMI WHERE PASS_NO = @PASS_NO">
+        <Column Name="pass_no" DataType="System.String"/>
+        <Column Name="pass_na" DataType="System.String"/>
+        <Column Name="pass_eng" DataType="System.String"/>
+        <Column Name="pass_wd" DataType="System.String"/>
+        <Column Name="pass_salt" DataType="System.String"/>
+        <Column Name="pass_code" DataType="System.String"/>
+        <Column Name="pass_id" DataType="System.String"/>
+        <Column Name="dpd_no" DataType="System.String"/>
+        <Column Name="ros_no" DataType="System.String"/>
+        <Column Name="rob_no" DataType="System.String"/>
+        <Column Name="emp_no" DataType="System.String"/>
+        <Column Name="pass_type" DataType="System.String"/>
+        <Column Name="spe_code" DataType="System.String"/>
+        <Column Name="e_mail" DataType="System.String"/>
+        <Column Name="str_no" DataType="System.String"/>
+        <Column Name="start_date" DataType="System.DateTime"/>
+        <Column Name="end_date" DataType="System.DateTime"/>
+        <Column Name="crt_no" DataType="System.String"/>
+        <Column Name="crt_date" DataType="System.DateTime"/>
+        <Column Name="pwd_reset_date" DataType="System.DateTime"/>
+        <Column Name="pwd_chg_date" DataType="System.DateTime"/>
+        <Column Name="rol_no" DataType="System.String"/>
+        <Column Name="tel_m" DataType="System.String"/>
+        <Column Name="f_cnt" DataType="System.String"/>
+        <Column Name="del_cd" DataType="System.String"/>
+        <Column Name="ldate" DataType="System.DateTime"/>
+        <Column Name="fdate" DataType="System.DateTime"/>
+        <Column Name="upd_no" DataType="System.String"/>
+        <Column Name="upd_date" DataType="System.DateTime"/>
+        <Column Name="REFRESH_TOKEN" DataType="System.String"/>
+        <Column Name="REFRESH_TOKEN_EXPIRYTIME" DataType="System.DateTime"/>
+        <CommandParameter Name="PASS_NO" DataType="22" Size="20" Expression="[PASS_NO]"/>
+      </TableDataSource>
+    </MsSqlDataConnection>
+    <Parameter Name="PASS_NO" DataType="System.String"/>
+  </Dictionary>
+  <ReportPage Name="Page1" RawPaperSize="9" Guides="718.2" Watermark.Font="宋体, 60pt" UnlimitedHeight="true" UnlimitedWidth="true">
+    <PageHeaderBand Name="PageHeader1" Width="718.2" Height="132.3">
+      <TextObject Name="Text2" Top="103.95" Width="94.5" Height="28.35" Text="帳號" HorzAlign="Center" VertAlign="Center" Font="標楷體, 10pt"/>
+      <TextObject Name="Text4" Left="103.95" Top="103.95" Width="132.3" Height="28.35" Text="名稱" AllowExpressions="false" HorzAlign="Center" VertAlign="Center" Font="標楷體, 10pt"/>
+      <TextObject Name="Text6" Top="75.6" Width="718.2" Height="28.35" Text="[Date]" Format="Date" Format.Format="d" HorzAlign="Center" Font="標楷體, 16pt"/>
+      <TextObject Name="Text7" Top="37.8" Width="718.2" Height="37.8" Text="測試報表" HorzAlign="Center" VertAlign="Center" Font="標楷體, 16pt"/>
+      <TextObject Name="Text5" Left="-28.35" Top="9.45" Width="746.55" Height="28.35" Text="國興資訊股份有限公司" HorzAlign="Center" Font="標楷體, 18pt"/>
+      <LineObject Name="Line2" Top="103.95" Width="756"/>
+      <LineObject Name="Line3" Top="132.3" Width="756"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="135.5" Width="718.2" Height="28.35" KeepDetail="true">
+      <TextObject Name="Text8" Left="9.45" Top="9.45" Width="94.5" Height="18.9" Text="[Table.pass_no]" Font="宋体, 9pt"/>
+      <TextObject Name="Text9" Left="141.75" Top="9.45" Width="94.5" Height="18.9" Text="[Table.pass_na]" Font="宋体, 9pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="167.05" Width="718.2" Height="718.2" Border.Lines="Bottom" FirstRowStartsNewPage="true"/>
+  </ReportPage>
+</Report>
